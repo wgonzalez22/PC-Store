@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Pc Store</title>
+    <script src="calculadora.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">PC STORE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="administrador.html">Administrador</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Inventario.html">Inventario</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Utilidades
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="Valor_producto.html">Valor Producto</a></li>
+                            <li><a class="dropdown-item" href="Equivalencia.html">Equivalencia Datos</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="text-center">Conversor de unidades tamaño datos</h1>
+
+    <div class="row mt-3 justify-content-center mt-5">
+        <div class="col-md-3 bg-info rounded-start">
+            <div class="p-3 w-100">
+                <input type="number" placeholder="Ingrese un valor" class="form-control" id="Inputvalor">
+                <select class="form-select" aria-label="Default select example" id="selectInput" >
+                    <option selected>Selecciona el tipo de dato</option>
+                    <option value="Byte">Byte</option>
+                    <option value="Kilobyte">Kilobyte</option>
+                    <option value="Megabyte">Megabyte</option>
+                    <option value="Gigabyte">Gigabyte</option>
+                    <option value="Terabyte">Terabyte</option>
+                </select>   
+            </div> 
+        </div>
+
+
+        <div class="col-md-1 bg-info">
+            <h1 class="p-3 w-100 text-center">=</h1>            
+        </div>
+
+        <div class="col-md-3 bg-info rounded-end">
+            <div class="p-3 w-100">
+                <input type="number" placeholder="Resultado" class="form-control" id="InputResultado" disabled>
+                <select class="form-select" aria-label="Default select example" id="selectOutput" onchange="calcularEquivalencia()">
+                    <option selected>Selecciona el tipo de dato</option>
+                    <option value="Byte">Byte</option>
+                    <option value="Kilobyte">Kilobyte</option>
+                    <option value="Megabyte">Megabyte</option>
+                    <option value="Gigabyte">Gigabyte</option>
+                    <option value="Terabyte">Terabyte</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
