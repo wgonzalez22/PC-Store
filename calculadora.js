@@ -24,8 +24,6 @@ function resetear(){
 
 // Calcular Equivalencias
 
-
-
 function calcularEquivalencia(){
     let valor = document.getElementById("Inputvalor").value 
     let selecEntrada = document.getElementById("selectInput").value
