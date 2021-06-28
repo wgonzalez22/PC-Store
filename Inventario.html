@@ -18,9 +18,18 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="administrador.html">Administrador</a>
-              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Administrador
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="Creardb.php">Crear base de datos</a></li>
+                  <li><a class="dropdown-item" href="Creartb.php">Crear tabla</a></li>
+                  <li><a class="dropdown-item" href="Reporte.php">Generar reporte PDF</a></li>
+                  <li><a class="dropdown-item" href="Backup.php">Generar Backup</a></li>
+                  <li><hr class="dropdown-divider"></li>                  
+                </ul>
+              </li>             
               <li class="nav-item">
                 <a class="nav-link" href="Inventario.html">Inventario</a>
               </li>
@@ -57,27 +66,27 @@
             <!-- Ingresar producto -->
 
             <div class="col-md-3 bg-info m-1 rounded-3">
-                <form>
+                <form action="ingresarp.php" method="POST">
                     <h4 class="mb-4">Ingresar producto</h4>
                     <div class="mb-3 w-100">
                       <label for="labelCodigo" class="form-label">Código</label>
-                      <input type="text" class="form-control" id="Inputcodigo" >          
+                      <input type="text" name = "codigo" class="form-control" id="Inputcodigo" >          
                     </div>
                     <div class="mb-3 w-100">
                       <label for="labelNombre" class="form-label">Nombre</label>
-                      <input type="text" class="form-control" id="InputNombre">
+                      <input type="text" name = "nombre" class="form-control" id="InputNombre">
                     </div>
                      <div class="mb-3 w-100">
                       <label for="labelMarca" class="form-label">Marca</label>
-                      <input type="text" class="form-control" id="InputMarca">
+                      <input type="text" name = "marca" class="form-control" id="InputMarca">
                     </div>
                     <div class="mb-3 w-100">
                         <label for="labelPrecioCompra" class="form-label">Precio compra</label>
-                        <input type="number" class="form-control" id="InputPrecioCompra">
+                        <input type="number" name = "precio" class="form-control" id="InputPrecioCompra">
                     </div>
                     <div class="mb-3 w-100">
                         <label for="labelCantidadComprada" class="form-label">Cantidad comprada</label>
-                        <input type="number" class="form-control" id="InputCantidadComprada">
+                        <input type="number" name = "cantidad" class="form-control" id="InputCantidadComprada">
                     </div>   
                    
                     <button type="submit" class="btn btn-primary mb-2">Registrar</button>
@@ -88,31 +97,31 @@
             <!-- Actualizar producto -->
 
             <div class="col-md-3 bg-info m-1 rounded-3">
-                <form>
-                    <h4 class="mb-4">Actualizar producto</h4>
-                    <div class="mb-3 w-100">
-                      <label for="labelCodigo" class="form-label">Código</label>
-                      <input type="text" class="form-control" id="Inputcodigo" >          
-                    </div>
-                    <div class="mb-3 w-100">
-                      <label for="labelNombre" class="form-label">Nombre</label>
-                      <input type="text" class="form-control" id="InputNombre">
-                    </div>
-                     <div class="mb-3 w-100">
-                      <label for="labelMarca" class="form-label">Marca</label>
-                      <input type="text" class="form-control" id="InputMarca">
-                    </div>
-                    <div class="mb-3 w-100">
-                        <label for="labelPrecioCompra" class="form-label">Precio compra</label>
-                        <input type="number" class="form-control" id="InputPrecioCompra">
-                    </div>
-                    <div class="mb-3 w-100">
-                        <label for="labelCantidadComprada" class="form-label">Cantidad comprada</label>
-                        <input type="number" class="form-control" id="InputCantidadComprada">
-                    </div>   
-                   
-                    <button type="submit" class="btn btn-primary mb-2">Modificar</button>
-                  </form>
+               <form action="Actualizar.php" method="POST">
+                      <h4 class="mb-4">Actualizar producto</h4>
+                      <div class="mb-3 w-100">
+                        <label for="labelCodigo" class="form-label">Código</label>
+                        <input type="text" name="codigo" class="form-control" id="Inputcodigo" >          
+                      </div>
+                      <div class="mb-3 w-100">
+                        <label for="labelNombre" class="form-label">Nombre</label>
+                        <input type="text" name="nombre" class="form-control" id="InputNombre">
+                      </div>
+                      <div class="mb-3 w-100">
+                        <label for="labelMarca" class="form-label">Marca</label>
+                        <input type="text" name="marca" class="form-control" id="InputMarca">
+                      </div>
+                      <div class="mb-3 w-100">
+                          <label for="labelPrecioCompra" class="form-label">Precio compra</label>
+                          <input type="number" name="precio" class="form-control" id="InputPrecioCompra">
+                      </div>
+                      <div class="mb-3 w-100">
+                          <label for="labelCantidadComprada" class="form-label">Cantidad comprada</label>
+                          <input type="number" name="cantidad" class="form-control" id="InputCantidadComprada">
+                      </div>   
+                    
+                      <button type="submit" class="btn btn-primary mb-2">Modificar</button>
+               </form>
         
             </div>
 
@@ -123,11 +132,11 @@
             <!-- Eliminar producto -->
 
             <div class="col-md-3 bg-info m-1 rounded-3">
-                <form>
+                <form action="Eliminar.php" method="POST">
                     <h4 class="mb-4">Eliminar producto</h4>
                     <div class="mb-3 w-100">
                       <label for="labelCodigo" class="form-label">Código</label>
-                      <input type="text" class="form-control" id="Inputcodigo" >          
+                      <input type="text" name="codigo"  class="form-control" id="Inputcodigo" >          
                     </div>
                     
                     <button type="submit" class="btn btn-primary mb-2">Borrar</button>
@@ -138,16 +147,15 @@
             <!-- Consultar producto -->
 
             <div class="col-md-3 bg-info m-1 rounded-3">
-                <form>
+                <form action="Consultar.php" method="POST">
                     <h4 class="mb-4">Consultar producto</h4>
                     <div class="mb-3 w-100">
                       <label for="labelCodigo" class="form-label">Código</label>
-                      <input type="text" class="form-control" id="Inputcodigo" >          
-                    </div>                   
-                   
+                      <input type="text" name="codigo" class="form-control" id="Inputcodigo" >          
+                    </div>               
+               
                     <button type="submit" class="btn btn-primary mb-2">Consultar</button>
-                  </form>
-        
+                  </form>       
             </div>
 
         </div> 
